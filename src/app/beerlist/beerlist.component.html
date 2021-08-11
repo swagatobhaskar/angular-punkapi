@@ -1,1 +1,9 @@
 <p>beerlist works!</p>
+<h5>Beer List from <b>Punk API</b></h5>
+<ul *ngFor="let beer of Beers">
+    <li>{{beer.id}}</li>
+    <li>{{beer.name}}</li>
+    <li>{{beer.tagline}}</li>
+    <li>{{beer.description}}</li>
+    <img src="{{beer.image_url}}" alt="beer image" weidth="200" height="200" />
+</ul>

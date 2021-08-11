@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchbeerService } from '../fetchbeer.service';
 
 @Component({
   selector: 'app-beerlist',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeerlistComponent implements OnInit {
 
-  constructor() { }
+  Beers: any = [];
+
+  constructor(
+    public fetchBeerService: FetchbeerService
+    ) { }
 
   ngOnInit(): void {
+    this.fetchBeerList();
+  }
+
+  fetchBeerList(){
+    return this.fetchBeerService.getBeerList().subscribe((res: {}) => {
+      this.Beers = res;
+    })
   }
 
 }

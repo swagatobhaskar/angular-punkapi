@@ -88,7 +88,7 @@ export class FetchbeerService {
       )
   }
 
-  processError(err){
+  processError(err: any){
     let message = '';
     if(err.error instanceof ErrorEvent) {
       message = err.error.message;
