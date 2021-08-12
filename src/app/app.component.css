@@ -1,0 +1,35 @@
+
+.name {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    height: fit-content;
+    padding: 10px 30px;
+    background-color:cornsilk;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    border: 2px solid brown;
+}
+
+.top-nav {
+
+}
+
+.ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0px 10px;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(74, 96, 219);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:visited {
+    color: rgb(47, 124, 47);
+}

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchbeerService } from '../fetchbeer.service';
-import { Beer } from '../BeerInterface';
 
 @Component({
   selector: 'app-randombeer',
@@ -9,6 +8,7 @@ import { Beer } from '../BeerInterface';
 })
 export class RandombeerComponent implements OnInit {
   randomBeer: any = [];
+  price: number = 0;
 
   constructor(
     public fetchBeerService: FetchbeerService
@@ -16,6 +16,7 @@ export class RandombeerComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchRandomBeer();
+    this.price = Math.floor(Math.random() * 100);
   }
 
   fetchRandomBeer(){

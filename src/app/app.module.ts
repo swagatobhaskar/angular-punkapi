@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BeerlistComponent } from './beerlist/beerlist.component';
 import { RandombeerComponent } from './randombeer/randombeer.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerlistComponent,
-    RandombeerComponent
+    RandombeerComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

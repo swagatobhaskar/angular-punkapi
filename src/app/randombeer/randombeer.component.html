@@ -1,6 +1,9 @@
-<h4>Random Beer:</h4>
-<ul *ngFor="let beer of randomBeer">
-    <li>Name: {{beer.name}}</li>
-    <li>One hop: {{beer.ingredients.hops[0].name}}</li>
-    <img src={{beer.image_url}} height="200" weidth="250" alt="random-beer-image"/>
-</ul>
+<div class="main-container">
+    <h4>Random Beer:</h4>
+    <ul *ngFor="let beer of randomBeer">
+        <li>Name: {{beer.name}}</li>
+        <li>One hop: {{beer.ingredients.hops[0].name}}</li>
+        <li>Price: {{price}}</li>
+        <img src={{beer.image_url}} height="200" weidth="250" alt="random-beer-image"/>
+    </ul>
+</div>

@@ -1,0 +1,26 @@
+.main-container {
+    margin: auto;
+    width: 90%;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: medium;
+}
+
+img {
+    position: relative;
+    left: 550px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: 400;
+}
