@@ -1,0 +1,42 @@
+h5 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 800;
+    color: rgb(76, 97, 212);
+    text-align: center;
+}
+
+b {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(33, 82, 97);
+}
+
+ul {
+    margin: 5px auto;
+    padding: 10px 20px;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.description {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: hidden;
+}
+
+.tag {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    position: relative;
+    left: 300px;
+}

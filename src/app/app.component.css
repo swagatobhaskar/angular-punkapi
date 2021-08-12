@@ -11,8 +11,9 @@
     border: 2px solid brown;
 }
 
-.top-nav {
-
+hr {
+    color: brown;
+    width: 95%;
 }
 
 .ul {
