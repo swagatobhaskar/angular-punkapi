@@ -12,6 +12,8 @@ h4 {
 img {
     position: relative;
     left: 550px;
+    height: 300px;
+    width: 180px;
 }
 
 ul {

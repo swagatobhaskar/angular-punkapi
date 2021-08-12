@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BeerlistComponent } from './beerlist/beerlist.component';
 import { RandombeerComponent } from './randombeer/randombeer.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerlistComponent,
     RandombeerComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

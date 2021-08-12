@@ -40,3 +40,16 @@ img {
     position: relative;
     left: 300px;
 }
+
+button {
+    position: relative;
+    left: 600px;
+    padding: 5px 20px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(187, 187, 187);
+    cursor: pointer;
+}
