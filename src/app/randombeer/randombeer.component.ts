@@ -8,19 +8,19 @@ import { Beer } from '../BeerInterface';
   styleUrls: ['./randombeer.component.css']
 })
 export class RandombeerComponent implements OnInit {
-  Beer: Beer = {};
+  randomBeer: any = [];
 
   constructor(
-    public fetchBeerService: FetchbeerService;
-  ) { }
+    public fetchBeerService: FetchbeerService
+  ) {  }
 
   ngOnInit(): void {
     this.fetchRandomBeer();
   }
 
   fetchRandomBeer(){
-    return this.fetchBeerService.getRandomBeer().subscribe((res: Beer) => {
-      this.Beer = res;
+    return this.fetchBeerService.getRandomBeer().subscribe(res => {
+      this.randomBeer = res;
     })
   }
 
