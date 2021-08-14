@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { FetchbeerService } from '../fetchbeer.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-shop',
@@ -8,16 +9,31 @@ import { FetchbeerService } from '../fetchbeer.service';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-  beerId!: number;
+  name = new FormControl('');
+  address = new FormControl('');
+  quantity = new FormControl('');
+  
+  beerId!: any;
+  singleBeer: any = [];
 
   constructor(
     private route: ActivatedRoute,
+    private fetchBeerService: FetchbeerService
   ) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      this.beerId = params['id'];
-    });
+    this.beerId = this.route.snapshot.paramMap.get("id");
+    this.fetchBeerById(+this.beerId);   // + operator converts string to number
+  };
+
+  fetchBeerById(id: number) {
+    this.fetchBeerService.getBeerById(id).subscribe(res => {
+      this.singleBeer = res
+    })
+  }
+
+  onSubmit(){
+    console.log("Hi");
   }
 
 }

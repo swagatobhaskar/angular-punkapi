@@ -33,6 +33,13 @@ export class FetchbeerService {
       )
   }
 
+  getBeerById(id: number): Observable<Beer>{
+    return this.httpClient.get<Beer>(this.punkUrl + `/${id}`)
+      .pipe(
+        retry(2), catchError(this.processError)
+      )
+  }
+
   processError(err: any){
     let message = '';
     if(err.error instanceof ErrorEvent) {

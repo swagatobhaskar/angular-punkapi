@@ -1,1 +1,24 @@
-<p>shop works!</p>
+<div class="main-container">
+    <div class="beer-info">
+        <ul *ngFor="let br of singleBeer">
+            <li>Name: {{br.name}}</li>
+            <li>Tag: {{br.tag}}</li>
+            <li>Description: {{br.description}}</li>
+            <img src="{{br.image_url}}" height=280 width=200 />
+        </ul>
+    </div>
+    <div>
+        <form (ngSubmit)="onSubmit()">
+            <label for="name">Name:
+                <input class="form-control" id="name" type="text" [formControl]="name" required />
+            </label>
+            <label for="address">Address:
+                <input class="form-control" id="address" type="text" [formControl]="address" required />
+            </label>
+            <label for="quantity">Quantity:
+                <input class="form-control" id="quantity" type="number" [formControl]="quantity" required />
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

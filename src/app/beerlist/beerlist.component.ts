@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { FetchbeerService } from '../fetchbeer.service';
 
 @Component({
@@ -11,11 +13,17 @@ export class BeerlistComponent implements OnInit {
   Beers: any = [];
 
   constructor(
-    public fetchBeerService: FetchbeerService
+    public fetchBeerService: FetchbeerService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
     this.fetchBeerList();
+  }
+
+  handleBeerBuy(id: number) {
+    const beerId = id;
+    this.router.navigate(['/shop/', beerId]);
   }
 
   fetchBeerList(){
