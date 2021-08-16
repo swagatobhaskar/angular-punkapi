@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FetchbeerService } from '../fetchbeer.service';
-import { FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-shop',
@@ -9,10 +9,16 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-  name = new FormControl('');
-  address = new FormControl('');
-  quantity = new FormControl('');
-  
+  customerForm = new FormGroup({
+    name: new FormControl(''),
+    quantity: new FormControl(''),
+    addressForm: new FormGroup({
+      city: new FormControl(''),
+      street: new FormControl(''),
+      block: new FormControl('')
+    })
+  });
+
   beerId!: any;
   singleBeer: any = [];
 

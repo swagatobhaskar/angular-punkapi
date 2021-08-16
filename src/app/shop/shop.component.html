@@ -8,17 +8,21 @@
         </ul>
     </div>
     <div>
-        <form (ngSubmit)="onSubmit()">
+        <div [formGroup]="customerForm" (ngSubmit)="onSubmit()">
             <label for="name">Name:
-                <input class="form-control" id="name" type="text" [formControl]="name" required />
+                <input class="form-control" id="name" type="text" formControlName="name" required />
             </label>
-            <label for="address">Address:
-                <input class="form-control" id="address" type="text" [formControl]="address" required />
-            </label>
-            <label for="quantity">Quantity:
-                <input class="form-control" id="quantity" type="number" [formControl]="quantity" required />
-            </label>
+            <form formGroupName="addressForm">
+                <label for="city">City:</label>
+                <input class="form-control" id="city" type="text" formControlName="city" />
+                <label for="street">Street:</label>
+                <input class="form-control" id="street" type="text" formControlName="street" />
+                <label for="block">Block:</label>
+                <input class="form-control" id="block" type="text" formControlName="block" />
+            </form>
+            <label for="quantity">Quantity:</label>
+            <input class="form-control" id="quantity" type="number" formControlName="quantity" />
             <button type="submit">Submit</button>
-        </form>
+        </div>
     </div>
 </div>
