@@ -32,4 +32,8 @@ export class BeerlistComponent implements OnInit {
     })
   }
 
+  getPrice() {
+    return Math.floor(300 * Math.random());
+  }
+
 }

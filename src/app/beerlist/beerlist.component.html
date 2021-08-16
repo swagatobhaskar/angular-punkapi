@@ -1,6 +1,7 @@
 <h5>Beer List from <b>Punk API</b></h5>
 <ul *ngFor="let beer of Beers">
     <li class="name">Beer Name: {{beer.name}}</li>
+    <li class="price">Price: {{getPrice()}}</li>
     <li class="tag">Tagline: {{beer.tagline}}</li>
     <li class="description">Description: {{beer.description}}</li>
     <img src="{{beer.image_url}}" alt="beer image" weidth="200" height="200" />
