@@ -19,6 +19,7 @@ export class ShopComponent implements OnInit {
     })
   });
 
+  showDiag: boolean = false;
   beerId!: any;
   singleBeer: any = [];
 
@@ -39,7 +40,9 @@ export class ShopComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("Hi");
+    setTimeout(function showDialogue() {
+      this.showDiag = true
+    }, 5000);
   }
 
 }
