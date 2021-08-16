@@ -1,0 +1,61 @@
+.mainContainer {
+    margin: 0px 10%;
+}
+
+.formGroup {
+    margin: 0% 10%;
+    display: inline-block;
+}
+
+
+label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}
+
+input {
+    width: 30%;
+    height: 20px;
+}
+
+ul {
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+li {
+    font-weight: bold;
+}
+
+.text {
+    display: inline;
+    font-weight: 400;
+}
+
+img {
+    position: relative;
+    left: 450px;
+}
+
+.notice {
+    background-color: rgb(125, 168, 231);
+    padding: 5px 15px;
+    border: 3px solid rgb(84, 135, 211);
+    border-radius: 20px;
+    text-align: center;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.order-submit {
+    position: relative;
+    left: 750px;
+    padding: 3px 5px;
+}
+
+h3 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

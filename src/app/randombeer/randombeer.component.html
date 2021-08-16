@@ -5,5 +5,6 @@
         <li>One hop: {{beer.ingredients.hops[0].name}}</li>
         <li>Price: {{price}}</li>
         <img src={{beer.image_url}} height="200" weidth="250" alt="random-beer-image"/>
+        <button [routerLink]="['/shop', beer.id]">Buy</button>
     </ul>
 </div>
