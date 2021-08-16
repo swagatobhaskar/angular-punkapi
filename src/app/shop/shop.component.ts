@@ -40,9 +40,15 @@ export class ShopComponent implements OnInit {
   }
 
   onSubmit(){
-    setTimeout(function showDialogue() {
-      this.showDiag = true
+    this.showDialogue();
+  }
+
+  showDialogue(){
+    this.showDiag = true;
+    setTimeout(() => {
+      this.showDiag = false;
     }, 5000);
+    clearTimeout();
   }
 
 }
