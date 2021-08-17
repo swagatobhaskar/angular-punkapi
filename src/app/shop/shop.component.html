@@ -1,33 +1,37 @@
 <div class="mainContainer">
-    <p class="notice" *ngIf="showDiag">
-        Order placed successfully!
-    </p>
-    <div class="main-container">
+    <div class="popup" *ngIf="showDiag">
+        <p class="notice">
+            Order placed successfully!
+        </p>
+    </div>
+    <div class="sub-container">
         <div class="beer-info">
             <ul *ngFor="let br of singleBeer">
                 <li>Name: <p class="text">{{br.name}}</p></li>
-                <li>Tag: <p class="text">{{br.tag}}</p></li>
+                <li>Tag: <p class="text">{{br.tagline}}</p></li>
                 <li>Description: <p class="text">{{br.description}}</p></li>
-                <img src="{{br.image_url}}" height=280 width=200 />
+                <img class="text-img" src="{{br.image_url}}" height=280 width=200 />
             </ul>
         </div>
         <div class="div-formGroup">
             <h3>Enter Address Details</h3>
-            <form class="formGroup" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
-                <label for="name">Name:</label>
-                <input class="form-control" id="name" type="text" formControlName="name" required />
-                <label for="quantity">Quantity:</label>
-                <input class="form-control" id="quantity" type="number" formControlName="quantity" />
-                <form formGroupName="addressForm">
-                    <label for="city">City:</label>
-                    <input class="form-control" id="city" type="text" formControlName="city" />
-                    <label for="street">Street:</label>
-                    <input class="form-control" id="street" type="text" formControlName="street" />
-                    <label for="block">Block:</label>
-                    <input class="form-control" id="block" type="text" formControlName="block" />
+            <div class="formSec">
+                <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+                    <label for="name">Name:</label>
+                    <input class="form-control" id="name" type="text" formControlName="name" required />
+                    <label for="quantity">Quantity:</label>
+                    <input class="form-control" id="quantity" type="number" formControlName="quantity" />
+                    <form formGroupName="addressForm">
+                        <label for="city">City:</label>
+                        <input class="form-control" id="city" type="text" formControlName="city" />
+                        <label for="street">Street:</label>
+                        <input class="form-control" id="street" type="text" formControlName="street" />
+                        <label for="block">Block:</label>
+                        <input class="form-control" id="block" type="text" formControlName="block" />
+                    </form>
+                    <button class="order-submit" type="submit">Submit</button>
                 </form>
-                <button class="order-submit" type="submit">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
