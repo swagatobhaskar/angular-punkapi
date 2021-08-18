@@ -69,7 +69,14 @@ button:hover {
     * {
         font-size: x-small;
         font-weight: 100;
-    };
-    img {
+    }
+}
+
+@media screen and (max-height: 1080px) {
+    button {
+        position: relative;
+        left: 50%;
+        padding: 5px 20px;
+        margin-top: 20px;
     }
 }

@@ -51,11 +51,10 @@ li {
 }
 
 .order-submit {
+    position: absolute;
+    right: 50%;
+    display: block;
     margin-top: 5px;
-    margin-left: 2px;
-    width: 490px;
-    height: 30px;
-    
 }
 
 h3 {
@@ -78,4 +77,14 @@ h3 {
 .formSec {
     margin: auto;
     width: 500px;
+}
+
+@media screen and (max-width: 1080px) {
+    .formSec {
+        width: 600px;
+        margin: auto;
+    }
+    input {
+        width: 60%;
+    }
 }

@@ -4,34 +4,42 @@
             Order placed successfully!
         </p>
     </div>
-    <div class="sub-container">
-        <div class="beer-info">
-            <ul *ngFor="let br of singleBeer">
-                <li>Name: <p class="text">{{br.name}}</p></li>
-                <li>Tag: <p class="text">{{br.tagline}}</p></li>
-                <li>Description: <p class="text">{{br.description}}</p></li>
-                <img class="text-img" src="{{br.image_url}}" height=280 width=200 />
-            </ul>
-        </div>
-        <div class="div-formGroup">
-            <h3>Enter Address Details</h3>
-            <div class="formSec">
-                <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
-                    <label for="name">Name:</label>
-                    <input class="form-control" id="name" type="text" formControlName="name" required />
-                    <label for="quantity">Quantity:</label>
-                    <input class="form-control" id="quantity" type="number" formControlName="quantity" />
-                    <form formGroupName="addressForm">
-                        <label for="city">City:</label>
-                        <input class="form-control" id="city" type="text" formControlName="city" />
-                        <label for="street">Street:</label>
-                        <input class="form-control" id="street" type="text" formControlName="street" />
-                        <label for="block">Block:</label>
-                        <input class="form-control" id="block" type="text" formControlName="block" />
-                    </form>
-                    <button class="order-submit" type="submit">Submit</button>
-                </form>
+    <div class="beer-info">
+        <ul *ngFor="let br of singleBeer">
+            <li>Name: <p class="text">{{br.name}}</p></li>
+            <li>Tag: <p class="text">{{br.tagline}}</p></li>
+            <li>Description: <p class="text">{{br.description}}</p></li>
+            <img class="text-img" src="{{br.image_url}}" alt="no-image" height="280" width="200" />
+        </ul>
+    </div>
+    <h3>Enter Address Details</h3>
+    <div class="formSec">
+        <form [formGroup]="customerForm" (ngSubmit)="onFormSubmit()">
+            <div>
+                <label for="name">Name:</label>
+                <input class="form-control" id="name" type="text" formControlName="name" required />
             </div>
-        </div>
+            <div>
+                <label for="quantity">Quantity:</label>
+                <input class="form-control" id="quantity" type="number" formControlName="quantity" />
+            </div>
+            <div formGroupName="addressForm">
+                <div>
+                    <label for="city">City:</label>
+                    <input class="form-control" id="city" type="text" formControlName="city" />
+                </div>
+                <div>
+                    <label for="street">Street:</label>
+                    <input class="form-control" id="street" type="text" formControlName="street" />
+                </div>
+                <div>
+                    <label for="block">Block:</label>
+                    <input class="form-control" id="block" type="text" formControlName="block" />
+                </div>
+            </div>
+            <div class="order-submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 </div>

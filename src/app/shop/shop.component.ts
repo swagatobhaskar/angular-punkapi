@@ -39,7 +39,8 @@ export class ShopComponent implements OnInit {
     })
   }
 
-  onSubmit(){
+  onFormSubmit(){
+    console.log(this.customerForm.value);
     this.showDialogue();
     this.customerForm.reset({
       name:'',
